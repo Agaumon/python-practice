@@ -1,0 +1,6 @@
+aFood = input("Name a food: ")
+aPlant = input("Name a type of plant: ")
+cookingMethod = input("Name a method of cooking: ")
+aWord = input("What word describes burned food?: ")
+aDiy = input("Name a DIY item: ")
+print(cookingMethod, aFood, "with", aWord, aPlant, "on a bed of", aDiy)
