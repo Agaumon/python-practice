@@ -2,7 +2,7 @@ print("Exam Grade Calculator")
 exam = input("Name of exam: ")
 points = int(input("Maximum Possible Score: "))
 score = int(input("Your score: "))
-grade = score / points
+grade = (score / points)*100
 letter = "N/A"
 if grade >= 96:
   letter = "A+"
