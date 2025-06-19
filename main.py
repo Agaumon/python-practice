@@ -3,7 +3,7 @@ print("Rock Paper Scissors Game")
 print("Select your move: (R)ock, (P)aper, or (S)cissors? ")
 P1score = 0
 P2score = 0
-while P1score < 3 or P2score < 3:
+while P1score < 3 and P2score < 3:
   Player1 = input("Player 1. Rock, Paper, or Scissors? ").upper()
   Player2 = input("Player 2. Rock, Paper, or Scissors? ").upper()
   # Normalize inputs to single letters
