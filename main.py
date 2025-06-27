@@ -11,9 +11,8 @@ def rollDice(sides):
       elif replay == "NO" or replay == "N":
         print("Aww okay bye")
         break
-    elif sides < 1:
-      print("Number of sides is not valid. Enter a higher number.")
     else:
-      "Invalid input. Try again."
+      print("Invalid input. Try again.")
+      break
 userSides = int(input("How many sides? "))
 rollDice(userSides)
