@@ -13,14 +13,10 @@ def rollDice():
 
 while True:
   name = input("Enter character name: ")
+  stats = rollDice()
   if name:
-    stats = rollDice()
-    print("Their health is", stats, "hp")
-    
-    again = input("Generate another character? (yes/no): ").lower()
-    if again != "yes" and again != "y":
-      break
+    print("Their health is",stats,"hp")
+    continue
   else:
-    print("Please enter a valid name!")
-
-print("Thanks for playing!")
+    print("Please enter a valid name.")
+    exit()
