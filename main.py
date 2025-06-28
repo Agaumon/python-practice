@@ -13,5 +13,6 @@ def rollDice():
 
 name = input("Enter character name: ")
 while True:
+  stats = rollDice()
   if name:
-    print("Their health is", newStat)
+    print("Their health is",stats,"hp")
