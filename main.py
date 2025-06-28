@@ -11,8 +11,16 @@ def rollDice():
   newStat = roll6 * roll8
   return newStat
 
-name = input("Enter character name: ")
 while True:
-  stats = rollDice()
+  name = input("Enter character name: ")
   if name:
-    print("Their health is",stats,"hp")
+    stats = rollDice()
+    print("Their health is", stats, "hp")
+    
+    again = input("Generate another character? (yes/no): ").lower()
+    if again != "yes" and again != "y":
+      break
+  else:
+    print("Please enter a valid name!")
+
+print("Thanks for playing!")
