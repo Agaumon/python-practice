@@ -2,20 +2,16 @@ import random
 
 print("Character Stats Generator")
 
-def baseStat(number):
-  base = ""
-  for i in range(number):
-    random.randint(1,number)
-    return base
+def baseStat(sides):
+  return random.randint(1,sides)
 
 def rollDice():
-  while True:
-    roll6 = random.randint(1,6)
-    roll8 = random.randint(1,8)
-    print(roll6)
-    print(roll8)
-    stats = roll6 * roll8
-    return stats
+  roll6 = baseStat(6)
+  roll8 = baseStat(8)
+  newStat = roll6 * roll8
+  return newStat
 
-baseStats = baseStat(6)
-finalStats = rollDice()
+name = input("Enter character name: ")
+while True:
+  if name:
+    print("Their health is", newStat)
