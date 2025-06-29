@@ -16,7 +16,7 @@ def play():
   pygame.mixer.unpause()
   while True:
     # Start taking user input and doing something with it
-    print("")
+    os.system("clear")
     print("Press P to Pause")
     print("Press M for main menu")
     option = input("Please select your choice: ")
