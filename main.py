@@ -17,9 +17,8 @@ def play():
   while True:
     # Start taking user input and doing something with it
     os.system("clear")
-    print("Press P to Pause")
-    print("Press M for main menu")
-    option = input("Please select your choice: ")
+    option = input("""Press P to Pause
+    Press M for main menu """)
     if option.upper() == "P":
       pause()
       break
