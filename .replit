@@ -5,6 +5,7 @@ audio = true
 
 [nix]
 channel = "stable-23_11"
+packages = ["SDL2", "SDL2_image", "SDL2_mixer", "SDL2_ttf", "fontconfig", "freetype", "libjpeg", "libpng", "pkg-config", "portmidi"]
 
 [unitTest]
 language = "python3"
