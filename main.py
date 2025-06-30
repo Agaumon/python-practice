@@ -49,5 +49,5 @@ def menu():
       healthRoll()
       strengthRoll()
       break
-
+    break
 menu()
