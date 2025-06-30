@@ -7,19 +7,17 @@ print("Character Creator")
 def rollDice(sides):
   while True:
     if sides > 1:
-      random.randint(1, sides)
+      return random.randint(1, sides)
     else:
       print("Not enough sides on this dice")
 
 def healthRoll():
-  while True:
     health = rollDice(6) * rollDice(12)
     health /= 2
     health += 10
     print("Health:",health)
 
 def strengthRoll():
-  while True:
     strength = rollDice(6) * rollDice(12)
     strength /= 2
     strength += 12
@@ -27,12 +25,29 @@ def strengthRoll():
 
 def menu():
   name = input("Name your character: ")
-  type = input("Please choose a race: Human, Elf, Orc, Dwarf: ")
+  time.sleep(1)
+  os.system("clear")
   while True:
-    time.sleep(1)
-    print(name,"the",type)
-    healthRoll()
-    strengthRoll()
-    break
+    type = input("Please choose a race: Human, Elf, Orc, Dwarf: ")
+    if type.upper() == "HUMAN":
+      type = "Human"
+    elif type.upper() == "ELF":
+      type = "Elf"
+    elif type.upper() == "ORC":
+      type = "Orc"
+    elif type.upper() == "DWARF":
+      type = "Dwarf"
+    else:
+      print("Please enter one of the listed races.")
+      time.sleep(1)
+      os.system("clear")
+      continue
+    while True:
+      time.sleep(1)
+      os.system("clear")
+      print(name,"the",type)
+      healthRoll()
+      strengthRoll()
+      break
 
 menu()
