@@ -52,17 +52,5 @@ def menu():
       strength = strengthRoll()
       break
     break
-  return name, type, health, strength
-
-print("Player 1:")
-player1_name, player1_type, player1_health, player1_strength = menu()
-
-print("Player 2:")
-player2_name, player2_type, player2_health, player2_strength = menu()
-
-print()
-print("Player 1:",player1_name,"the",player1_type)
-print("Health:",player1_health,"Strength:",player1_strength)
-print()
-print("Player 2:",player2_name,"the",player2_type)
-print("Health:",player2_health,"Strength:",player2_strength)
+  return health, strength, type, name
+player1 = menu()
