@@ -25,8 +25,7 @@ def strengthRoll():
     print("Strength:",strength)
     return strength
 
-def menu(Player):
-  print(Player,"Create your character")
+def menu():
   name = input("Name your character: ")
   time.sleep(1)
   os.system("clear")
@@ -53,4 +52,17 @@ def menu(Player):
       strength = strengthRoll()
       break
     break
-player1 = menu(1)
+  return name, type, health, strength
+
+print("Player 1:")
+player1_name, player1_type, player1_health, player1_strength = menu()
+
+print("Player 2:")
+player2_name, player2_type, player2_health, player2_strength = menu()
+
+print()
+print("Player 1:",player1_name,"the",player1_type)
+print("Health:",player1_health,"Strength:",player1_strength)
+print()
+print("Player 2:",player2_name,"the",player2_type)
+print("Health:",player2_health,"Strength:",player2_strength)
