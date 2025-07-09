@@ -15,12 +15,15 @@ def prettyPrint():
   time.sleep(1)
 
 def spam():
-  os.system("clear")
+  count = 0
   for email in listOfEmail:
-    if email < listOfEmail[10]:
+    if count <= 10:
+      os.system("clear")
+      time.sleep(1)
       print(f"""Dear {email}
-  It has come to our attention that you're missing out on the amazing Replit 100 days of code. We insist you do it right away. If you don't we will pass on your email address to every spammer we've ever encountered and also sign you up to the My Little Pony newsletter, because that's neat. We might just do that anyway.Love and hugs,
-  Ian Spammington III""")
+    It has come to our attention that you're missing out on the amazing Replit 100 days of code. We insist you do it right away. If you don't we will pass on your email address to every spammer we've ever encountered and also sign you up to the My Little Pony newsletter, because that's neat. We might just do that anyway.Love and hugs,
+    Ian Spammington III""")
+    time.sleep(1)
   
 while True:
   print("SPAMMER Inc.")
@@ -34,7 +37,7 @@ while True:
       listOfEmail.remove(email)
   elif menu == "3":
     prettyPrint()
-  time.sleep(1)
-  os.system("clear")
   elif menu == "4":
     spam()
+  time.sleep(1)
+  os.system("clear")
