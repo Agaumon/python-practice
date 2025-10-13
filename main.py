@@ -5,7 +5,7 @@ print("MokeBeasts")
 mokebeast = {"Name": "", "Type": "", "Special Move": "", "HP": "", "MP": ""}
 
 for key in mokebeast:
-  mokebeast[key] = input(f"{key}: ").capitalize
+  mokebeast[key] = input(f"{key}: ").capitalize()
 
 print()
 os.system("clear")
