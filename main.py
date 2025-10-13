@@ -5,7 +5,7 @@ print("MokeBeasts")
 mokebeast = {"Name": "", "Type": "", "Special Move": "", "HP": "", "MP": ""}
 
 for key in mokebeast:
-  mokebeast[key] = input(f"{key}: ")
+  mokebeast[key] = input(f"{key}: ").capitalize
 
 print()
 os.system("clear")
@@ -13,7 +13,7 @@ os.system("clear")
 type_value = ""
 for name, value in mokebeast.items():
   if name == "Type":
-    type.value = value.upper()
+    type_value = value.upper()
     if type_value == "EARTH":
       color = "\033[0;32m"  # green
     elif type_value == "FIRE":
