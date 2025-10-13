@@ -2,20 +2,6 @@ import os
 
 print("MokeBeasts")
 
-def colorChange(color):
-  if color == "r":
-    print("\033[0;31m", end="")
-  if color == " ":
-    print("\033[0m", end="")
-  if color == "b":
-    print("\033[0;34m", end="")
-  if color == "g":
-    print("\033[0;32m", end="")
-  if color == "p":
-    print("\033[0;35m", end="")
-  if color == "y":
-    print("\033[1;33m", end="")
-
 mokebeast = {"Name": "", "Type": "", "Special Move": "", "HP": "", "MP": ""}
 
 for key in mokebeast:
@@ -24,5 +10,22 @@ for key in mokebeast:
 print()
 os.system("clear")
 
+type_value = ""
 for name, value in mokebeast.items():
-  print(f"{name}: {value}")
+  if name == "Type":
+    type.value = value.upper()
+    if type_value == "EARTH":
+      color = "\033[0;32m"  # green
+    elif type_value == "FIRE":
+      color = "\033[0;31m"  # red
+    elif type_value == "AIR":
+      color = "\033[0m"     # white/normal
+    elif type_value == "WATER":
+      color = "\033[0;34m"  # blue
+    elif type_value == "SPIRIT":
+      color = "\033[0;35m"  # purple
+    else:
+      color = "\033[0m"     # normal
+
+for name, value in mokebeast.items():
+  print(f"{color}{name}: {value}")
